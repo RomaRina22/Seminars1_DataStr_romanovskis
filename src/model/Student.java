@@ -1,7 +1,7 @@
 package model;
 
 public class Student implements Comparable<Student>{
-	static int count = 0;
+	static int count = 1;
 	private int id;
 	private String name;
 	private String surname;
