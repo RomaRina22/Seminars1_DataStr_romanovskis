@@ -6,6 +6,7 @@ public class Saraksts<T> {
 	private T[] array;
 	private int size;
 	
+	@SuppressWarnings("unchecked")
 	public Saraksts (int length) {
 		if (length > 0) {
 			array = (T[]) new Object[length];	//atradu stackoverflow
@@ -27,7 +28,7 @@ public class Saraksts<T> {
 	}
 	public int getSize() {return size;}
 	public int getLength() {return array.length;}
-
+	@SuppressWarnings("unchecked")
 	private void increaseLength() {
 		int newlength = array.length>100 ? (int)(array.length * 1.5): array.length*2; //zem 100 dubulto, citādi *1.5
 		T[] newarray = (T[]) new Object[newlength];
@@ -95,6 +96,7 @@ public class Saraksts<T> {
 		}
 		return null;
 	}
+	@SuppressWarnings("unchecked")
 	public void sort() {
 		T[] sortablearray = (T[]) new Object[size]; //nepieciešams jo Arrays.sort nepieņem null vērtības
 		for (int i = 0; i < size; i++) {sortablearray[i] = array[i];}
@@ -113,6 +115,7 @@ public class Saraksts<T> {
 	public void print() {
 		System.out.println(this);
 	}
+	@SuppressWarnings("unchecked")
 	public void clear() {
 		array = (T[]) new Object[1];
 		size = 0;
