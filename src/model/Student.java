@@ -1,6 +1,6 @@
 package model;
 
-public class Student {
+public class Student implements Comparable<Student>{
 	static int count = 0;
 	private int id;
 	private String name;
@@ -76,6 +76,13 @@ public class Student {
 				+ ", Gender=" + getGender() + ", Average Grade=" + getAverageGrade() + "]";
 	}
 
-	
+	@Override
+	public int compareTo(Student o) {
+		float thisavg = this.getAverageGrade();
+		float thatavg = o.getAverageGrade();
+		if (thisavg < thatavg) {return -1;}
+		else if (thisavg == thatavg) {return 0;}
+		return 1;
+	}
 	
 }
