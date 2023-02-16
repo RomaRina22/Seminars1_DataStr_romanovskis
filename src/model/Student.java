@@ -9,12 +9,39 @@ public class Student {
 	private char gender;
 	
 	public Student(String name, String surname, int[] grades) {
-		
+		setName(name);
+		setSurname(surname);
+		setGrades(grades);
+		calculateGender();
+		id = count++;
 	}
 	
 	public Student() {
-		
+		setName("");
+		setSurname("");
+		setGrades(new int[] {2,2,2});
+		calculateGender();
+		id = count++;
 	}
-	
+
+	public void setName(String name) {
+		this.name = name.matches("[A-Z][a-z]+[sae]") ?  name: "Default";
+	}
+
+	public void setSurname(String surname) {
+		this.surname = surname.matches("[A-Z][a-z]+[sae]") ? surname: "Default";
+	}
+
+	public void setGrades(int[] grades) {
+		if (grades != null) {
+			this.grades = grades.length==3 ? grades: new int[] {0,0,0};
+		}
+	}
+	private void calculateGender() {
+		char lastLetterOfName = name.charAt(name.length()-1);
+		if (lastLetterOfName == 'a' || lastLetterOfName == 'e') {this.gender = 'f';}
+		else if (lastLetterOfName == 's') {this.gender = 'm';}
+		else {this.gender = 'x';}
+	}
 	
 }
