@@ -69,4 +69,13 @@ public class Student {
 		avg /= grades.length;
 		return avg;
 	}
+
+	@Override
+	public String toString() {
+		return "Student [Id=" + getId() + ", Name=" + getName() + ", Surname=" + getSurname()
+				+ ", Gender=" + getGender() + ", Average Grade=" + getAverageGrade() + "]";
+	}
+
+	
+	
 }
