@@ -51,16 +51,24 @@ public class Main {
 		System.out.println("Sakārto: "+ sar);
 		
 		Saraksts<Student> studenti = new Saraksts<>(3);
+		System.out.println("Stud. Saraksts"+ (studenti.isEmpty()? " ir ": " nav ") + "tukšs");
 		studenti.addLast(new Student("Arija", "Gultne",  new int[]{5,4,2}));
 		studenti.addLast(new Student("Boriss", "Straume", new int[] {6,2,3}));
 		studenti.addLast(new Student("Volvo", "Brenss", new int[] {8,7,9}));
-		System.out.println("Stud. Saraksts ir pilns:"+ studenti.isFull());
+		System.out.println("Stud. Sarakstā ir "+studenti.getSize()+" elementi");
+		System.out.println("Stud. Sarakstā ir "+studenti.getLength()+" vietas");
+		System.out.println("Stud. Saraksts"+ (studenti.isEmpty()? " ir ": " nav ") + "tukšs");
+		System.out.println("Stud. Saraksts"+ (studenti.isFull()? " ir ": " nav ") + "pilns");
 		studenti.print();
 		studenti.addLast(new Student("Jana", "Hello", new int[] {2,2,2}));
-		System.out.println("Stud. Saraksts ir pilns:"+ studenti.isFull());
+		System.out.println("Stud. Sarakstā ir "+studenti.getSize()+" elementi");
+		System.out.println("Stud. Sarakstā ir "+studenti.getLength()+" vietas");
+		System.out.println("Stud. Saraksts"+ (studenti.isFull()? " ir ": " nav ") + "pilns");
 		studenti.print();
 		studenti.sort();
 		studenti.print();
+		System.out.println("3. studenta atzīmes ir: "+ studenti.getByIndex(2).getGrades());
+		
 		
 	}
 	
