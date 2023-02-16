@@ -43,5 +43,25 @@ public class Student {
 		else if (lastLetterOfName == 's') {this.gender = 'm';}
 		else {this.gender = 'x';}
 	}
+
+	public int getId() {
+		return id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getSurname() {
+		return surname;
+	}
+
+	public int[] getGrades() {
+		return grades;
+	}
+
+	public char getGender() {
+		return gender;
+	}
 	
 }
