@@ -54,7 +54,10 @@ public class Main {
 		studenti.addLast(new Student("Arija", "Gultne",  new int[]{5,4,2}));
 		studenti.addLast(new Student("Boriss", "Straume", new int[] {6,2,3}));
 		studenti.addLast(new Student("Volvo", "Brenss", new int[] {8,7,9}));
+		System.out.println("Stud. Saraksts ir pilns:"+ studenti.isFull());
+		studenti.print();
 		studenti.addLast(new Student("Jana", "Hello", new int[] {2,2,2}));
+		System.out.println("Stud. Saraksts ir pilns:"+ studenti.isFull());
 		studenti.print();
 		studenti.sort();
 		studenti.print();
