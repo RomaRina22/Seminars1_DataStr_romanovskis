@@ -85,4 +85,12 @@ public class Student implements Comparable<Student>{
 		return 1;
 	}
 	
+	
+	public boolean equals(Student o) {
+		if (!this.getName().equals(o.getName())) {return false;}
+		if (!this.getSurname().equals(o.getSurname())) {return false;}
+		if (!(this.getId() == o.getId())) {return false;}
+		return true;
+	}
+	
 }
