@@ -99,7 +99,7 @@ public class Saraksts<T> {
 		return null;
 	}
 	public void sort() {
-		T[] sortablearray = (T[]) new Object[size];
+		T[] sortablearray = (T[]) new Object[size]; //nepieciešams jo Arrays.sort nepieņem null vērtības
 		for (int i = 0; i < size; i++) {sortablearray[i] = array[i];}
 		Arrays.sort(sortablearray);
 		for (int i = 0; i < size; i++) {array[i] = sortablearray[i];}
