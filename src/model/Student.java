@@ -63,5 +63,10 @@ public class Student {
 	public char getGender() {
 		return gender;
 	}
-	
+	public float getAverageGrade() {
+		float avg = 0.0f;
+		for (int i: grades) {avg+=i;}
+		avg /= grades.length;
+		return avg;
+	}
 }
