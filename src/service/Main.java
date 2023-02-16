@@ -2,6 +2,7 @@ package service;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 import model.Saraksts;
@@ -65,9 +66,10 @@ public class Main {
 		System.out.println("Stud. Sarakstā ir "+studenti.getLength()+" vietas");
 		System.out.println("Stud. Saraksts"+ (studenti.isFull()? " ir ": " nav ") + "pilns");
 		studenti.print();
+		System.out.println("Sakārto stud. sarakstu.");
 		studenti.sort();
 		studenti.print();
-		System.out.println("3. studenta atzīmes ir: "+ studenti.getByIndex(2).getGrades());
+		System.out.println("3. studenta atzīmes ir: "+ Arrays.toString(studenti.getByIndex(2).getGrades()));
 		
 		
 	}
