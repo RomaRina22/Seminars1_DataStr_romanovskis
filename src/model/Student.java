@@ -81,7 +81,7 @@ public class Student implements Comparable<Student>{
 		float thisavg = this.getAverageGrade();
 		float thatavg = o.getAverageGrade();
 		if (thisavg < thatavg) {return -1;}
-		else if (thisavg == thatavg) {return 0;}
+		if (thisavg == thatavg) {return 0;}
 		return 1;
 	}
 	
