@@ -89,7 +89,13 @@ public class Student implements Comparable<Student>{
 	public boolean equals(Student o) {
 		if (!this.getName().equals(o.getName())) {return false;}
 		if (!this.getSurname().equals(o.getSurname())) {return false;}
-		if (!(this.getId() == o.getId())) {return false;}
+		if (this.getId() != o.getId()) {return false;}
+		return true;
+	}
+	public boolean equals(String name, String surname, int id) {
+		if (!this.getName().equals(name)) {return false;}
+		if (!this.getSurname().equals(surname)) {return false;}
+		if (this.getId() != id) {return false;}
 		return true;
 	}
 	
