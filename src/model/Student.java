@@ -25,11 +25,11 @@ public class Student implements Comparable<Student>{
 	}
 
 	public void setName(String name) {
-		this.name = name.matches("[A-Z][a-z]+[sae]") ?  name: "Default";
+		this.name = name.matches("[A-Z][a-z]+") ?  name: "Default";
 	}
 
 	public void setSurname(String surname) {
-		this.surname = surname.matches("[A-Z][a-z]+[sae]") ? surname: "Default";
+		this.surname = surname.matches("[A-Z][a-z]+") ? surname: "Default";
 	}
 
 	public void setGrades(int[] grades) {
