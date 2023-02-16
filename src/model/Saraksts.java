@@ -1,7 +1,6 @@
 package model;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 public class Saraksts<T> {
 	private T[] array;
