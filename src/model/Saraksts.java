@@ -59,7 +59,7 @@ public class Saraksts<T> {
 			}	
 		}
 		else {
-			System.out.println("addByIndex index out of bounds");
+			throw new IndexOutOfBoundsException("addByIndex index out of bounds");
 		}
 	}
 	public T removeByIndex(int index) {
@@ -71,15 +71,13 @@ public class Saraksts<T> {
 			size--;
 			return retVal;
 		}
-		System.out.println("removeByIndex index out of bounds");
-		return null;
+		throw new IndexOutOfBoundsException("removeByIndex index out of bounds");
 	}
 	public T getByIndex(int index) {
 		if (index >= 0 && index < size) {
 			return array[index];
 		}
-		System.out.println("getByIndex index out of bounds");
-		return null;
+		throw new IndexOutOfBoundsException("getByIndex index out of bounds");
 	}
 	public int getIndexByValue(T query) {
 		for (int i = 0; i<size; i++) {
